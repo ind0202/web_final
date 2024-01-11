@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&AHub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_addquestion.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Q&AHub</h1>
+        <nav>
+        <ul>
+            <li><a href="login.html">tomato_0318</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main">
+            <div class="main_inside">
+                <h2>輸入您的問題</h2>
+            </div>
+            <textarea name="question"
+                    required
+                    style="resize:none;"></textarea>       
+            <div class="submit">
+                <a href="mainpage.html">送出</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2023 Q&AHub. All rights reserved. Content on this site is protected by copyright law. Unauthorized use is strictly prohibited. Q&AHub and its logos are registered trademarks.
+    </footer>
+</body>
+</html>

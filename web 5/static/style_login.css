@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: #F0F0F0;
+    height: 85px;
+    width:100%
+}
+h1{
+    font-size: 40px;
+    position: absolute;
+    left: 5vw;
+    top: 0;
+    line-height: 85px;
+}
+header ul{
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 85px;
+}
+header li{
+    display: inline;
+    margin-right: 5vw;
+}
+header a{
+    color: black;
+    text-decoration: none;
+}
+header a:hover{
+    text-decoration: underline;
+}
+main{
+    background-color: #F0F0F0;
+    width: 100%;
+    height: 45.6vw;
+}
+main h2{
+    color: white;
+    padding: 2vw;
+    margin-left: 2vw;
+}
+.main_inside{
+    background-color: black;
+    height: 7vw;
+    width: 80.2vw;
+    margin-left: 9vw;
+}
+.input{
+    background-color: white;
+    height: 30vw;
+    width: 80.2vw;
+    margin-left: 9vw;
+}
+.input_inside{
+    height: 10vw;
+    width: 30vw;
+    margin-left: 25vw;
+    padding-top: 8vw;
+}
+.input_inside label{
+    font-size: 23px;
+    margin-bottom: 3vw;
+}
+.input_inside input{
+    font-size: 23px;
+    margin-bottom: 3vw;
+}
+.login{
+    width: 10vw;
+    height: 4vw;
+    margin-left: 63vw;
+    margin-top: 2vw;
+    background-color: #908982;
+}
+.login a{
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    line-height: 4vw;
+    margin-left: 3vw;
+}
+.login:hover{
+    background-color: #F0F0F0;
+}
+footer{
+    color: white;
+    font-size: 10px;
+    background-color: black;
+    height: 70px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

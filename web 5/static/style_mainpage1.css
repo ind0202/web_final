@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: #F0F0F0;
+    height: 85px;
+    width:100%
+}
+h1{
+    font-size: 40px;
+    position: absolute;
+    left: 5vw;
+    top: 0;
+    line-height: 85px;
+}
+header ul{
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 85px;
+}
+header li{
+    display: inline;
+    margin-right: 5vw;
+}
+header a{
+    color: black;
+    text-decoration: none;
+}
+header a:hover{
+    text-decoration: underline;
+}
+main{
+    background-color: #F0F0F0;
+    width: 100%;
+    height: 84vw;
+}
+main h2{
+    color: white;
+    padding: 2vw;
+    margin-left: 2vw;
+}
+.main_inside{
+    background-color: black;
+    height: 7vw;
+    width: 80.2vw;
+    margin-left: 9vw;
+}
+.input{
+    background-color: white;
+    height: 77vw;
+    width: 80.2vw;
+    margin-left: 9vw;
+}
+.input p{
+    font-size: 23px;
+    height: 11vw;
+    width: 65vw;
+    margin-left: 3.5vw;
+    padding: 4vw;
+}
+.add{
+    width: 13vw;
+    height: 4vw;
+    margin-left: 58vw;
+    margin-top: 2vw;
+    background-color: #908982;
+}
+.add a{
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    line-height: 4vw;
+    margin-left: 2.7vw;
+}
+.add:hover{
+    background-color: #F0F0F0;
+}
+.message{
+    border: 1px solid black;
+    width: 62vw;
+    height: 10vw;
+    margin-top: 5vw;
+    margin-left: 9vw;
+}
+.message p{
+    font-size: 20px;
+    width: 55vw;
+    height: 6vw;
+    padding: 0vw;
+    margin: 2vw;
+}
+footer{
+    color: white;
+    font-size: 10px;
+    background-color: black;
+    height: 70px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

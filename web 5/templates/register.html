@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q&AHub註冊</title>
+  <link rel="stylesheet" href="style_register.css">
+</head>
+<body>
+<header>
+  <h1>Q&AHub</h1>
+  <nav>
+    <ul>
+      <li><a href="login.html">登入</a></li>
+      <li><a href="register.html">註冊</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="main">
+    <div class="main_inside">
+      <h2>註冊</h2>
+    </div>
+    <div class="input">
+      <div class="input_inside">
+        <label for="registerUsername">Username:</label>
+        <input type="text" id="registerUsername" required>
+        <br>
+        <label for="registerEmail">Email:</label>
+        <input type="email" id="registerEmail" required>
+        <br>
+        <label for="registerBirthday">Birthday:</label>
+        <input type="date" id="registerBirthday" required>
+        <br>
+        <label for="registerGender">Gender:</label>
+        <select id="registerGender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <br>
+        <label for="registerPassword">Password:</label>
+        <input type="password" id="registerPassword" required>
+      </div>
+      <div class="register">
+        <a href="mainpage.html" onclick="register(event);">註冊</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  async function register(event) {
+    // 阻止默認的跳轉行為
+    event.preventDefault();
+  
+    const username = document.getElementById('registerUsername').value;
+    const email = document.getElementById('registerEmail').value;
+    const birthday = document.getElementById('registerBirthday').value;
+    const gender = document.getElementById('registerGender').value;
+    const password = document.getElementById('registerPassword').value;
+  
+    const response = await fetch('http://localhost:5000/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        'username': username,
+        'email': email,
+        'birthday': birthday,
+        'gender': gender,
+        'password': password
+      })
+    });
+
+    const result = await response.json();
+  
+    // 在這裡添加其他處理邏輯，例如顯示成功或失敗的消息
+    alert(result.message);
+  
+    // 如果註冊成功，可以進行重定向
+    if (result.message === '註冊成功') {
+      window.location.href = "mainpage.html";
+    }
+  }
+</script>
+
+<footer>
+  &copy; 2023 Q&AHub. All rights reserved. Content on this site is protected by copyright law. Unauthorized use is strictly prohibited. Q&AHub and its logos are registered trademarks.
+</footer>
+</body>
+</html>

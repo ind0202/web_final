@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q&AHub登入</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_login.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Q&AHub</h1>
+      <nav>
+        <ul>
+            <li><a href="login.html">登入</a></li>
+            <li><a href="register.html">註冊</a></li>
+        </ul>
+      </nav>
+    </header>
+<main>
+  <div class="main">
+    <div class="main_inside">
+      <h2>登入</h2>
+    </div>
+    <div class="input">
+      <div class="input_inside">
+        <label for="loginUsername">帳號:</label>
+        <input type="text" id="loginUsername" required>
+        <br>
+        <label for="loginPassword">密碼:</label>
+        <input type="password" id="loginPassword" required>
+      </div>
+      <div class="login">
+        <a href="mainpage_nologin.html">登入</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <script>
+async function login() {
+  const username = document.getElementById('loginUsername').value;
+  const password = document.getElementById('loginPassword').value;
+
+  const response = await fetch('http://localhost:5000/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include', // 添加這行
+    body: JSON.stringify({ "username": username, "password": password })
+  });
+
+  const result = await response.json();
+  alert(result.message);
+
+}
+
+  </script>
+
+  <footer>
+    &copy; 2023 Q&AHub. All rights reserved. Content on this site is protected by copyright law. Unauthorized use is strictly prohibited. Q&AHub and its logos are registered trademarks.
+  </footer>
+</body>
+</html>
